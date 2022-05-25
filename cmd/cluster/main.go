@@ -1,12 +1,3 @@
-# Envoy XDS Types
-
-This package provides the Go types for the Envoy XDS APIs.
-
-## Creating a CDS response type
-
-To create a CDS response, use the `cluster.NewResponse` func.
-
-```go
 package main
 
 import (
@@ -64,6 +55,5 @@ func main() {
 		log.Fatal("Error marshalling response: ", err)
 	}
 
-	// return the response
+	log.Println(string(data))
 }
-```

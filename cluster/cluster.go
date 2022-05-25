@@ -1,4 +1,4 @@
-package xds
+package cluster
 
 type Response struct {
 	VersionInfo  string       `json:"version_info"`
@@ -16,10 +16,10 @@ type Resource struct {
 	DNSLookupFamily string           `json:"dns_lookup_family"`
 	Type            string           `json:"type"`
 	LoadAssignment  LoadAssignment   `json:"load_assignment"`
-	TransportSocket *transportSocket `json:"transport_socket,omitempty"`
+	TransportSocket *TransportSocket `json:"transport_socket,omitempty"`
 }
 
-type transportSocket struct {
+type TransportSocket struct {
 	Name        string                     `json:"name"`
 	TypedConfig TransportSocketTypedConfig `json:"typed_config"`
 }
