@@ -31,16 +31,16 @@ type Redirect struct {
 	PrefixRewrite string `json:"prefix_rewrite,omitempty"`
 }
 
-type routeVirtualHost struct {
+type VirtualHost struct {
 	Name    string   `json:"name"`
 	Domains []string `json:"domains"`
 	Routes  []Routes `json:"routes"`
 }
 
 type Resource struct {
-	Type         string             `json:"@type"`
-	Name         string             `json:"name"`
-	VirtualHosts []routeVirtualHost `json:"virtual_hosts"`
+	Type         string        `json:"@type"`
+	Name         string        `json:"name"`
+	VirtualHosts []VirtualHost `json:"virtual_hosts"`
 }
 
 // NewResponse creates a new route response with the given version info and control plane identifier.
