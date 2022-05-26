@@ -2,7 +2,7 @@
 
 This package provides the Go types for the Envoy XDS APIs.
 
-## Creating a CDS response type
+## Creating an XDS API Cluster REST Discovery Response
 
 To create a CDS response, use the `cluster.NewResponse` func.
 
